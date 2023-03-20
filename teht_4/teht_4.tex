@@ -1,0 +1,96 @@
+\documentclass{report}
+
+\input{../preamble}
+\input{../macros}
+\input{../letterfonts}
+
+\title{\Huge{Anturifysiikka} Tehtävät 4}
+\author{\huge{Aman Mughal}}
+\date{06/02/2023}
+
+\begin{document}
+
+\maketitle
+
+\qs{}{
+    Ilmatäytteisen solenoidin pituus on 40 cm, ympyrän muotoisen
+    poikkileikkauksen halkaisija 28 mm ja johdinkierrosten lukumäärä 900. Kuinka
+    suuri virta solenoidin tulee kestää, jos magneettivuon tiheyden solenoidin
+    keskiosassa halutaan olevan 35 mT? [ 12 A ]
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        l &= 40\ \mathrm{cm}, d = 28\ \mathrm{mm}, n = 900, B = 35\ \mathrm{mT} \\
+        B &= \frac{\mu_0 n I}{l} \Rightarrow I = \frac{B \cdot l}{\mu_0 \cdot n} \\
+        &= \frac{35 \cdot 10^{-3}\ \mathrm{T} \cdot 40 \cdot 10^{-2}\ \mathrm{m}}{4 \pi \cdot 10^{-7} \cdot 900} \\
+        &\approx \underline{12\ \mathrm{A}}
+    \end{align*}
+}
+
+\qs{}{
+    Ympyrän muotoinen johdinsilmukka, jonka halkaisija on 9,1 cm, asetetaan
+    homogeeniseen 0,48 T:n magneettikenttään siten, että silmukan tason
+    normaalin ja kentän välinen kulma on $59^\circ$. Kuinka suuri vääntömomentti
+    silmukkaan kohdistuu, kun siihen syötetään 7,4 A:n virta? [ 0,020 Nm ]
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        d &= 9,1\ \mathrm{cm}, B = 0,48\ \mathrm{T}, \theta = 59^\circ, I = 7,4\ \mathrm{A} \\\\
+        A &= \pi \cdot \left(\frac{d}{2}\right)^2 \\
+        &= \pi \cdot \left(\frac{9,1 \cdot 10^{-2}\ \mathrm{m}}{2}\right)^2 \\
+        &= 0.006504\ \mathrm{m}^2 \\\\
+        \theta &= 59^\circ = \frac{59 \cdot \pi}{180} \\
+        &= 1,033\ \mathrm{rad} \\\\
+        \tau &= B \cdot I \cdot A \cdot sin(\theta) \\
+        &= 0,48\ \mathrm{T} \cdot 7,4\ \mathrm{A} \cdot 0,006504\ \mathrm{m}^2 \cdot sin(1,033\ \mathrm{rad}) \\
+        &\approx \underline{0,020\ \mathrm{Nm}}
+    \end{align*}
+}
+
+\newpage
+
+\qs{}{
+    Homogeeniseen 0,91 T:n magneettikenttään asetetaan käämi, jonka
+    kierrosluku on 100, ympyrän muotoisen poikkileikkauksen halkaisija 7,9 cm ja
+    resistanssi 5,2 $\Omega$. Käämin symmetria-akselin ja kentän välinen kulma on $71^\circ$.
+    Kuinka suuri on käämin napajännitteen oltava, jotta käämiin kohdistuisi 0,021
+    Nm:n vääntömomentti? [ 0,26 V ]
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        B &= 0,91\ \mathrm{T}, n = 100, d = 7,9\ \mathrm{cm}, R = 5,2\ \Omega, \theta = 71^\circ, \tau = 0,021\ \mathrm{Nm} \\\\
+        A &= \pi \cdot \left(\frac{d}{2}\right)^2 \\
+        &= \pi \cdot \left(\frac{9,1 \cdot 10^{-2}\ \mathrm{m}}{2}\right)^2 \\
+        &= 0,004902\ \mathrm{m}^2 \\\\
+        \theta &= 71^\circ = \frac{71 \cdot \pi}{180} \\
+        &= 1,239\ \mathrm{rad} \\\\
+        \tau &= n \cdot B \cdot (\frac{V}{R}) \cdot A \cdot sin(\theta) \Rightarrow V = \frac{(\tau \cdot R)}{n \cdot B \cdot A \cdot sin(\theta)} \\
+        V &= \frac{(0,021\ \mathrm{Nm} \cdot 5,2\ \Omega)}{100 \cdot 0,91\ \mathrm{T} \cdot 0,004902\ \mathrm{m}^2 \cdot sin(1,239\ \mathrm{rad})} \\\
+        &\approx \underline{0,26\ \mathrm{V}}
+    \end{align*}
+}
+
+\qs{}{
+    Tasavirtamoottorilla nostetaan vakionopeudella kuormaa, jonka massa on
+    0,050 kg (ks. alla oleva kuva). Moottorin käämissä on 100 kierrosta, sen
+    poikkileikkauksen pinta-ala on 12 $cm^2$
+    , ja käämi on 0,10 T:n suuruisessa
+    magneettikentässä. Moottorin akselin säde on 4,0 mm. Miten suuri käämin läpi
+    kulkevan sähkövirran on vähintään oltava? [ 0,16 A ]
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        m &= 0,050\ \mathrm{kg}, n = 100, A = 12\ \mathrm{cm}^2, B = 0,10\ \mathrm{T}, r = 4\ \mathrm{mm} \\\\
+        \tau &= m \cdot g \cdot r \\
+        &= 0,050\ \mathrm{kg} \cdot 9,81\ \mathrm{m/s}^2 \cdot 4 \cdot 10^{-3}\ \mathrm{m} \\\\
+        I &= \frac{\tau}{B \cdot A} \\
+        &= \frac{(0,050\ \mathrm{kg} \cdot 9,81\ \mathrm{m/s}^2 \cdot 4 \cdot 10^{-3}\ \mathrm{m})}{100 \cdot 0,10\ \mathrm{T} \cdot 12 \cdot 10^{-4}\ \mathrm{m}^2} \\
+        &\approx \underline{0,16\ \mathrm{A}}
+    \end{align*}
+}
+
+\end{document}

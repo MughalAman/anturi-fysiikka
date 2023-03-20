@@ -1,0 +1,101 @@
+\documentclass{report}
+
+\input{../preamble}
+\input{../macros}
+\input{../letterfonts}
+
+\title{\Huge{Anturifysiikka} Tehtävät 2}
+\author{\huge{Aman Mughal}}
+\date{25/01/2023}
+
+\begin{document}
+
+\maketitle
+
+\qs{}{
+    Elektroni liikkuu nopeudella $1,9 \cdot 10^7$ m/s tasaiseen magneettikenttään, jonka
+    magneettivuon tiheys on 48 µT ja suunta kohtisuorassa elektronin nopeutta
+    vastaan. Kuinka suuri on elektronin radan säde magneettikentässä? [ 2,3 m ]
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        r &= m * v / (q * B)  \\\\
+        r &= \frac{9,1 \cdot 10^{-31} \text{ kg} \cdot 1,9 \cdot 10^7 \text{ m/s}}{1,6 \cdot 10^{-19} \text{ C} \cdot 48 \cdot 10^{-6} \text{ T}} \\\\
+        r &= 2,3 \text{ m}
+    \end{align*}
+}
+
+\qs{}{
+    Kuinka suurella jännite-erolla edellisen tehtävän elektronit on kiihdytetty
+    annetun nopeuden saavuttamiseksi? Voit olettaa, että elektronit ovat lähteneet
+    liikkeelle levosta. [ 1,0 kV ]
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        a &= \frac{(1,9 \cdot 10^7)^2}{2.3} = 3.04 \cdot 10^{13}  \text{ m}/s^2\\\\
+        t &= \frac{2 \pi r}{v} \\\\
+        t &= \frac{2 \pi \cdot 2,3 \text{ m}}{1,9 \cdot 10^7 \text{ m/s}} \\\\
+        t &= 0,74 \cdot 10^{-6} \text{ s} = 0,74 \mu \text{s} \\\\
+        d &= \frac{1}{2} \cdot a \cdot t^2 \\\\
+        d &= \frac{1}{2} \cdot (3.04 \cdot 10^{13} \text{ m}/s^2) \cdot (0,74 \cdot 10^{-6} \text{ s})^2\\\\
+        \Delta V &= W / q = (q/m) \cdot a \cdot d \\\\
+        \Delta V &= (4.307 \cdot 10^{-28} C/kg) \cdot (3.04 \cdot 10^{13} m/s^2) \cdot (8,32 \text{ m}) \\\\
+        \Delta V &= 1,0  \cdot 10^6 \text{ V} = 1,0 kV
+    \end{align*}
+}
+
+\newpage
+
+\qs{}{
+    Kuinka pitkä aika tehtävän 1 elektroneilla kuluu yhteen ratakierrokseen?
+    Millaista taajuutta kyseinen jaksollinen liike vastaa? [ 0,74 µs; 1,3 MHz ]
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        T &= \frac{2 \pi r}{v} \\\\
+        T &= \frac{2 \pi \cdot 2,3 \text{ m}}{1,9 \cdot 10^7 \text{ m/s}} \\\\
+        T &= 0,74 \cdot 10^{-6} \text{ s} = 0,74 \mu \text{s} \\\\
+        f &= \frac{1}{T} \\\\
+        f &= \frac{1}{0,74 \cdot 10^{-6} \text{ s}} \\\\
+        f &= 1,3 \cdot 10^6 \text{ Hz} = \text{1,3 MHz}
+    \end{align*}
+}
+
+\newpage
+
+
+\qs{}{
+    220 km/s:n vauhtiin kiihdytetyt protonit
+    ohjataan poikittaissuuntaiseen homogeeniseen
+    magneettikenttään, jonka vaikutuksesta niiden
+    nopeuden suunta kääntyy päinvastaiseksi.
+    Oheisen kuvan esittämä tulo- ja lähtösuuntien
+    välinen poikittaissiirtymä d on 40 cm. a) Määritä
+    tämän perusteella (kuvassa harmaan alueen)
+    magneettivuon tiheyden suuruus, ja b) päättele
+    sen suunta. c) Kuinka kauan protoni viettää aikaa
+    magneettikentässä? [a) 11 mT c) 2,9 µs ]
+}
+
+\pf{a) Vastaus}{
+    \begin{align*}
+        r &= \frac{40 \text{ cm}}{2}  = 20 \text{ cm} \\\\
+        B &= \frac{mv}{q \cdot r} \\\\
+        B &= \frac{1,672 \cdot 10^{-27} \text{ kg} \cdot 220 \cdot 10^3 \text{ m/s}}{1,6 \cdot 10^{-19} \text{ C} \cdot 20 \cdot 10^{-2} \text{ m}} \\\\
+        B &= 11 \cdot 10^{-3} \text{ T} = 11 \text{ mT}
+    \end{align*}
+}
+
+\pf{c) Vastaus}{
+    \begin{align*}
+        \frac{T}{2} &= \pi \cdot \frac{m}{q} \cdot B \\\\
+        \frac{T}{2} &= \pi \cdot \frac{1,672 \cdot 10^{-27} \text{ kg}}{1,6 \cdot 10^{-19} \text{ C}} \cdot 11 \cdot 10^{-3} \text{ T} \\\\
+        \frac{T}{2} &= 2,9 \cdot 10^{-6} \text{ s} = 2,9 \mu \text{s} 
+    \end{align*}
+}
+
+
+\end{document}

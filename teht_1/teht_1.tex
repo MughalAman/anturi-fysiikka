@@ -1,0 +1,106 @@
+\documentclass{report}
+
+\input{../preamble}
+\input{../macros}
+\input{../letterfonts}
+
+\title{\Huge{Anturifysiikka} Tehtävät 1}
+\author{\huge{Aman Mughal}}
+\date{18/01/2023}
+
+\begin{document}
+
+\maketitle
+
+\qs{}{
+Magneettivuon tiheys 7,4 cm:n etäisyydellä pitkästä ja suorasta johtimesta
+on 96 µT. Millä etäisyydellä johtimesta magneettivuon tiheys on 20 µT? [ 36 cm ]
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        \frac{B_1}{B_2} & = \frac{r_2}{r_1} \\\\
+        \Rightarrow B_2 & = B_1 \cdot \frac{r_1}{r_2} \\\\
+        20  \mu \text{T} &= 96 \mu \text{T} \cdot \frac{7.4 \text{ cm}}{r2} \\\\
+        %solve for x
+        \Rightarrow r_2 &= \frac{96 \mu \text{T} \cdot 7.4 \text{ cm}}{20 \mu \text{T}}\\\\
+        r_2 &= \frac{710.4 \text{ cm}}{20} \approx 36 \text{ cm}
+    \end{align*}
+}
+
+\qs{}{
+    Kaksi yhdensuuntaista pitkää ja suoraa virtajohdinta on 9,7 cm:n
+    etäisyydellä toisistaan. Määritä magneettivuon tiheys johtimien yhdysjanan
+    keskipisteessä, kun johtimissa kulkevat 53 A:n ja 82 A:n virrat a) samaan
+    suuntaan b) vastakkaisiin suuntiin. [ a) 0,12 mT b) 0,56 mT ]
+}
+
+\pf{a) Vastaus}{
+    %calculate the magnetic field at the center of the two wires
+    \begin{align*}
+        B & = \frac{\mu_0 I}{2 \pi r} \\\\
+        %plug in the values
+        B & = \frac{4 \pi \cdot 10^{-7} \cdot 53 A}{2 \pi \cdot 9.7 \cdot 10^{-2}} \\\\
+        %calculate the answer
+        B & = 0.12 \cdot 10^{-3} \text{ T} = 0.12 \text{ mT}
+    \end{align*}
+}
+
+\pf{b) Vastaus}{
+    %calculate the magnetic field at the center of the two wires
+    \begin{align*}
+        B & = \frac{\mu_0 I}{2 \pi r}                                              \\\\
+        %plug in the values
+        B & = \frac{4 \pi \cdot 10^{-7} \cdot (82 A - 53 A)}{2 \pi \cdot 9.7 \cdot 10^{-3}}\\\\
+        %calculate the answer
+        B & = 0.56 \cdot 10^{-3} \text{ T} = 0.56 \text{ mT}
+    \end{align*}
+}
+
+\qs{}{
+    Ilmatäytteisen solenoidin pituus on 40 cm ja ympyrän muotoisen
+    poikkileikkauksen halkaisija 28 mm. Johtimessa kulkevan virran suurin sallittu
+    arvo on 12 A. Magneettivuon tiheydeksi solenoidin keskiosassa halutaan 35
+    mT. a) Kuinka monta johdinkierrosta pituusyksikköä kohti on solenoidissa
+    vähintään oltava? b) Määritä johtimen pituus. [ a) 2300 kierrosta/m b) 82 m ]
+}
+
+\pf{a) Vastaus}{
+    %calculate the number of turns per meter
+    \begin{align*}
+        B &= \mu n I 
+        \Rightarrow n = \frac{B}{\mu I} \\\\
+        n &= \frac{35 \cdot 10^{-3}}{4 \pi \cdot 10^{-7} \cdot 12 A} \approx 2300 \text{ kierrosta/m} \\\\
+    \end{align*}
+}
+
+\pf{b) Vastaus}{
+    %calculate the length of the wire
+    \begin{align*}
+        B &= \frac{\mu_0 n I}{l} 
+        \Rightarrow n = \frac{B \cdot l}{\mu_0 I} \\\\
+        l_w &= \pi d \cdot \frac{B \cdot l}{\mu_0 I} \\\\
+        l_w &= \pi \cdot 28 \text{ mm} \cdot 10^{-3} \cdot \frac{35 \cdot 10^{-3} \cdot 40 \cdot 10^{-2} \text{ cm}}{4 \pi \cdot 10^{-7} \cdot 12 A} \\\\
+        l_w &\approx 82 \text{ m}
+    \end{align*}
+}
+
+\qs{}{
+Elektroni liikkuu nopeudella $1,9 \cdot 10^7$
+m/s tasaiseen magneettikenttään,
+jonka magneettivuon tiheys on 48 µT ja suunta kohtisuorassa elektronin
+nopeutta vastaan. Kuinka suuri magneettinen voima elektroniin vaikuttaa? $ 1,5 \cdot 10^{-16} N $
+}
+
+\pf{Vastaus}{
+    %calculate the magnetic force on the electron the result
+    \begin{align*}
+        F & = q \cdot v \cdot B                                                                              \\\\
+        %plug in the values
+        F & = 1.6 \cdot 10^{-19} \text{ C} \cdot 1.9 \cdot 10^7 \text{ m/s} \cdot 48 \cdot 10^{-6} \text{ T} \\\\
+        %calculate the answer
+        F & \approx 1.5 \cdot 10^{-16} \text{ N}
+    \end{align*}
+}
+
+\end{document}

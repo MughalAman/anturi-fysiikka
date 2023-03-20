@@ -1,0 +1,97 @@
+\documentclass{report}
+
+\input{../preamble}
+\input{../macros}
+\input{../letterfonts}
+
+\title{\Huge{Anturifysiikka} Tehtävät 3}
+\author{\huge{Aman Mughal}}
+\date{31/01/2023}
+
+\begin{document}
+
+\maketitle
+
+\qs{}{
+    Suora johdin, jonka pituus on 3,5 m, a) on kohtisuorassa magneettikenttää vastaan, b) muodostaa 46° kulman magneettikentän kanssa. Määritä johtimeen kohdistuva magneettinen voima, kun magneettivuon tiheys on 0,67 mT ja johtimessa kulkee 5,9 A:n virta. [ a) 14 mN b) 10 mN ]
+}
+
+\pf{a)}{
+    \begin{align*}
+        B &= 0,67 \text{ mT} \\
+        l &= 3,5 \text{ m} \\
+        I &= 5,9 \text{ A} \\
+        F &= I \cdot l \cdot B \cdot sin(90^{\circ}) \\
+        F &= 5,9 A \cdot 3,5 \text{ m } \cdot 0,67 mT \cdot 10^{-3} \cdot sin(90^{\circ}) = 0.0138 \text{ N} \cdot 10^{3} \approx 14 \text{ mN}
+    \end{align*}
+}
+
+\pf{b)}{
+    \begin{align*}
+        B &= 0,67 \text{ mT} \\
+        l &= 3,5 \text{ m} \\
+        I &= 5,9 \text{ A} \\
+        F &= I \cdot l \cdot B \cdot sin(46^{\circ}) \\
+        F &= 5,9 A \cdot 3,5 \text{ m } \cdot 0,67 mT \cdot 10^{-3} \cdot sin(46^{\circ}) = 0.0099 \text{ N} \cdot 10^{3} \approx 10 \text{ mN}
+    \end{align*}
+}
+
+\qs{}{
+    Virtajohtimessa A kulkee 4,1 A:n virta, ja sen kanssa samansuuntaisessa johtimessa B kulkee 13 A:n virta. Johtimet ovat 11 cm:n etäisyydellä toisistaan. Määritä a) magneettivuon tiheys A:n kohdalla ja b) A:n 5,0 m:n mittaiseen osaan kohdistuva magneettinen voima. [ a) 24 $\mu$T b) 0,48 mN ]
+}
+
+\pf{a)}{
+    \begin{align*}
+        I_1 &= 4,1 \text{ A, } I_2 = 13 \text{ A} \\
+        d &= 11 \text{ cm} = 0,11 m \\
+        B &= \frac{I_1 + I_2}{2\pi d} = \frac{4,1 + 13}{2 \pi \cdot 0,11} = 24 \mu \text{T}
+    \end{align*}
+}
+
+\pf{b)}{
+    \begin{align*}
+        I_1 &= 4,1 \text{ A, } I_2 = 13 \text{ A} \\
+        d &= 11 \text{ cm} = 0,11 m \\
+        l &= 5 \text{ m} \\
+        F &= \frac{\mu _0 \cdot I_1 \cdot I_2 \cdot l}{2\pi \cdot d} \\
+        F &= \frac{4\pi \cdot 10^{-7} \cdot 4,11 A \cdot 13 A \cdot 5 m}{2\pi \cdot 0,11 m} = 0.0004857 N \cdot 10^{3} = 0,48 \text{ mN}
+    \end{align*}
+}
+
+\qs{}{
+    Vaakasuorassa johtimessa kulkee 120 A:n virta kohti koillista. Millaisen voiman maapallon magneettikenttä aiheuttaa johtimen 10 m:n mittaiseen osaan, kun kentällä on alaspäin suuntautuva 52 $\mu$T:n suuruinen pystykomponentti ja pohjoiseen suuntautuva 18 $\mu$T:n suuruinen vaakakomponentti? [ 64 mN, luoteesta 14° ylöspäin ]
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        I &= 120 \text{ A} \\
+        l &= 10 \text{ m} \\
+        B &= \sqrt{(52 \mu \text{T})^2 + (18 \mu \text{T})^2} = 54 \mu \text{T} \\
+        F &= B \cdot I \cdot l \cdot sin(90^{\circ}) \\
+        F &= 54 \mu \text{T} \cdot 120 \text{ A} \cdot 10 \text{ m} \cdot sin(90^{\circ}) = 0.064 \text{ N} \cdot 10^{3} = 64 \text{ mN}
+    \end{align*}
+}
+
+\qs{}{
+    Neliön muotoinen johdinsilmukka (sivun pituus 87 mm) on homogeenisessa magneettikentässä, jonka magneettivuon tiheys on viereisen kuvan mukaisesti kahden silmukan sivun kanssa yhdensuuntainen ja itseisarvoltaan 37 mT:n suuruinen. a) Määritä kaikkiin silmukan sivuihin kohdistuvien (ulkoisesta magneettikentästä aiheutuvien) magneettisten voimien suuruudet ja suunnat, kun silmukassa kulkee 9,1 A virta myötäpäivään. b) Määritä silmukkaan kohdistuvan momentin suuruus.[ a) 29 mN (tai nolla) b) 2,5 mNm ]
+}
+
+\pf{a)}{
+    \begin{align*}
+        B &= 37 \text{ mT} \\
+        I &= 9,1 \text{ A} \\
+        l &= 87 \text{ mm} = 0,087 m \\
+        F &= B \cdot I \cdot l \cdot sin(90^{\circ}) \\
+        F &= 37 \cdot 10^(-3) T \cdot 9,1 A \cdot 87 \cdot 10^(-3) m = 0,029 \text{ N} \cdot 10^{3} = 29 \text{ mN} \lor 0
+    \end{align*}
+}
+
+\pf{b)}{
+    \begin{align*}
+        F &= 0,029 \text{ N} \\
+        R &= 0,087 \text{ m} \\
+        M &= F \cdot R = 0,029 \text{ N} \cdot 0,087 \text{ m} = 0.0025 \text{ Nm} = 2,5 \text{ mNm}
+    \end{align*}
+}
+
+\end{document}

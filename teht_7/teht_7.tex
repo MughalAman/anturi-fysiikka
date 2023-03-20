@@ -1,0 +1,120 @@
+\documentclass{report}
+
+\input{../preamble}
+\input{../macros}
+\input{../letterfonts}
+
+\title{\Huge{Anturifysiikka} Tehtävät 7}
+\author{\huge{Aman Mughal}}
+\date{18/03/2023}
+
+\begin{document}
+
+\maketitle
+
+\qs{}{
+    Käämi, jonka kierrosluku on 450 ja poikkileikkauksen halkaisija 74 mm,
+    asetetaan homogeeniseen 0,23 T:n magneettikenttään. Määritä käämin
+    läpäisevä magneettivuo, kun a) käämin akseli on kentän suuntainen, b) käämin
+    akseli on kohtisuorassa kenttää vastaan, c) käämin akselin ja kentän välinen
+    kulma on $24^\circ$. [ a) 0,45 Wb b) 0 Wb c) 0,41 Wb ]
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        N &= 450 \quad B = 0.23 T \quad A =  \pi \cdot \frac{ (0.074 m)^2}{4} \\\\
+        a) \\
+        \Phi &=  N \cdot B \cdot A \cdot \theta
+        \\ &= 450 \cdot  0.23 T \cdot ( \pi \cdot \frac{ (0.074 m)^2}{4}) \cdot \cos 0^\circ
+        \\ &= \underline{\underline{0.45 Wb}} \\\\
+        b) \\
+        \Phi &=  N \cdot B \cdot A \cdot \theta
+        \\ &= 450 \cdot  0.23 T \cdot ( \pi \cdot \frac{ (0.074 m)^2}{4}) \cdot \cos 90^\circ
+        \\ &= \underline{\underline{0 Wb}} \\\\
+        c) \\
+        \Phi &=  N \cdot B \cdot A \cdot \theta
+        \\ &= 450 \cdot  0.23 T \cdot ( \pi \cdot \frac{ (0.074 m)^2}{4}) \cdot \cos 24^\circ
+        \\ &= \underline{\underline{0.41 Wb}}
+    \end{align*}
+}
+
+\newpage
+
+\qs{}{
+    Käämi (kierrosluku 720 ja poikkileikkauksen pinta-ala 17 $cm^2$
+    ) asetetaan
+    homogeeniseen magneettikenttään ja kytketään navoistaan vastukseen, jonka
+    resistanssi on 44 $\Omega$. Määritä käämin induktiojännite ja piirissä kulkeva virta,
+    kun magneettivuon tiheys kasvaa 1,9 sekunnissa tasaisesti arvosta 3,6 mT
+    arvoon 9,9 mT. Tarkastele kahta tapausta: a) käämin akseli on
+    magneettikentän suuntainen ja b) käämin akselin ja kentän välinen kulma on
+    $57^\circ$. [ a) 4,1 mV ja 92 µA b) 2,2 mV ja 50 µA ]
+}
+
+\pf{Vastaus}{
+    a)
+    \begin{align*}
+        \varepsilon &= N \frac{\Delta \phi}{\Delta t} \\
+        &= N A \frac{\Delta B}{\Delta t} \\
+        &= (720 \cdot 17 \cdot 10^{-4} m^2) (3.32 \cdot 10^{-3}) \\
+        &= 4.06 \cdot 10^{-3} \mathrm{V}  \approx \underline{\underline{4.1 mV}} \\
+        I &= \frac{\varepsilon}{R} = \frac{4.06 \cdot 10^{-3}}{44} = 92 \cdot 10^{-6}  \mathrm{A} \approx \underline{\underline{92 \mu A}}
+    \end{align*}
+
+    b)
+    \begin{align*}
+        \varepsilon &= N A \frac{\Delta B \cos \theta}{\Delta t} \\
+        &= (720 \cdot 17 \cdot 10^{-4}) (3.32 \cdot 10^{-3}) \cos 57^\circ \\
+        &= 2.21 \cdot 10^{-3} \mathrm{V} \approx \underline{\underline{2.2 mV}} \\
+        I &= \frac{\varepsilon}{R} = \frac{2.21 \cdot 10^{-3}}{44} = 50 \cdot 10^{-6}  \mathrm{A} \approx \underline{\underline{50 \mu A}}
+    \end{align*}
+}
+
+\newpage
+
+\qs{}{
+    Käämiä (kierrosluku 250 ja poikkileikkauksen pinta-ala 13 $cm^2$
+    ) käännetään
+    siten, että sen taso on aluksi vaakasuorassa ja 0,050 sekunnin kuluttua
+    pystysuorassa. Määritä käämin keskimääräinen induktiojännite, kun kyseisessä
+    paikassa Maan magneettikenttä on lähes pystysuora ja magneettivuon tiheys
+    on 60 µT. [ 0,39 mV ]
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        B &= 60 \mu T \quad A = 13 cm^2 \quad N = 250 \quad \Delta t = 0.050 s \\\\
+        \varepsilon &= N A \frac{\Delta B}{\Delta t} \\
+        &= 250 \cdot 13 \cdot 10^{-4} m^2 \cdot \frac{60 \cdot 10^{-6} T}{0.050 s} \\
+        &= 0.00039 \mathrm{V} \approx \underline{\underline{0.39 mV}}
+    \end{align*}
+}
+
+\newpage
+
+\qs{}{
+    Alla olevan kuvan esittämässä systeemissä 0,25 kg:n kuorman halutaan
+    laskeutuvan vakionopeudella 5,0 m/s. Vaakasuorilla kuparikiskoilla (lähes)
+    kitkatta liukuva johdesauva on yhdistetty kuormaan langalla, joka kulkee
+    herkkäliikkeisen pyörän yli. Homogeeninen 1,5 T:n magneettikenttä on
+    pystysuora ja kiskojen välinen etäisyys 1,5 m. Kuinka suureksi on
+    säätövastuksen resistanssi valittava? [ 10 Ω ] \\
+    \includegraphics[width=0.5\textwidth]{./fy_teht_7_pic.png}
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        m &= 0,25\text{ kg}\\
+        v &= 5,0\text{ m/s}\\
+        g &= 9,81\text{ m/s}^2\\
+        B &= 1,5\text{ T}\\
+        L &= 1,5\text{ m}\\
+        F_B &= m \cdot g = 0,25\text{ kg} \cdot 9,81\text{ m/s}^2 = 2,4525\text{ N}\\
+        P &= F_B \cdot v = 2,4525\text{ N} \cdot 5,0\text{ m/s} = 12,2625\text{ W}\\
+        U &= B \cdot L \cdot v = 1.5 \cdot 1.5 \cdot 5.0 = 11.25\ \text{V}\\
+        R &= \frac{U^2}{P} = \frac{11.25^2}{12.26} = 10.32 \Omega \approx \underline{\underline{10 \Omega}}
+        \end{align*}
+}
+
+
+\end{document}
