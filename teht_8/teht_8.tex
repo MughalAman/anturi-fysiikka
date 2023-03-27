@@ -1,0 +1,106 @@
+\documentclass{report}
+
+\input{../preamble}
+\input{../macros}
+\input{../letterfonts}
+
+\title{\Huge{Anturifysiikka} Tehtävät 8}
+\author{\huge{Aman Mughal}}
+\date{27/03/2023}
+
+\begin{document}
+
+\maketitle
+
+\qs{}{
+Neliönmuotoinen johdinsilmukka,
+jonka sivun pituus on 12 cm, tuodaan
+oheisen kuvan mukaisesti
+homogeeniseen 0,98 T:n
+magneettikenttään, jonka suunta on
+kohtisuorassa silmukan tasoa vastaan.
+Silmukan resistanssi on 1,5 $\Omega$. a) Kuinka
+suurella voimalla silmukkaa on
+työnnettävä, jotta se saataisiin vietyä
+kokonaisuudessaan kenttään (tasaisella
+vauhdilla) 5,0 sekunnissa? Määritä myös
+b) silmukan lähdejännite sekä c)
+silmukkaan indusoituva virta suuntineen.
+[ a) 0,22 mN b) 2,8 mV c) 1,9 mA ]
+}
+
+\pf{b}{
+    \begin{align*}
+        12 \text{ cm} &\rightarrow 0,12 \text{ m} \rightarrow L = 0.12 \text{ m} \\\\
+        A &= L^2 \rightarrow (0.12m)^2 \rightarrow 0.0144 \text{ m}^2 \\
+        \varepsilon &= \frac{\Delta \theta}{\Delta t}  = \frac{0.98T \cdot 0.0144 m^2}{5.0 s}\\
+        \varepsilon &= 0.00288 \frac{Tm^2}{s} \approx \underline{2.8 mV}
+    \end{align*}
+}
+
+\pf{c}{
+    \begin{align*}
+        I &= \frac{U}{R} \\
+        I &= \frac{-0.0028}{1.5 \Omega} = -0.0019 A \rightarrow \underline{1.9 mA}
+    \end{align*}
+}
+
+\pf{a}{
+    \begin{align*}
+        F &= B \cdot I \cdot \l \rightarrow 0.98 T \cdot 0.0019 A \cdot 0.12 m \rightarrow 0.0002207 N \rightarrow \underline{0.22 mN}
+    \end{align*}
+}
+
+\newpage
+
+\qs{}{
+Kuinka suuri täytyy vaihtovirtageneraattorin pyörimisnopeuden olla, jotta
+lähdejännitteen huippuarvo olisi 1,5 kV? Käämin kierrosluku on 420,
+poikkileikkauksen pinta-ala 87 $cm^2$ ja magneettivuon tiheys 1,7 T. [2300 rpm]
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        U &= 1.5 kV = 1500 V \quad A = 87 \text{ cm}^2 \rightarrow 0.0087 m^2 \quad B = 1.7 T \quad N = 420 \\\\
+        F &= \frac{U_max}{N \cdot A \cdot B \cdot 2 \cdot \pi} \\
+        F &= \frac{1500 V}{420 \cdot 0.0087 m^2 \cdot 1.7 T \cdot 2 \cdot \pi} \cdot 60 \approx \underline{2300 rpm}
+    \end{align*}
+}
+
+\newpage
+
+\qs{}{
+Kuinka suuri sähkövirta tarvitaan, jotta sähkömoottorin käämiin kohdistuisi
+enimmillään 9,0 Nm:n suuruinen vääntömomentti? Käämissä on 50 kierrosta,
+sen kierrosten poikkipinta-ala on neliö, jonka sivun pituus on 15 cm, ja käämi
+on suunnilleen homogeenisessa 0,80 T:n magneettikentässä. [ 10 A ]
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        t &= N \cdot B \cdot A \cdot I \\
+        A &= S^2 \rightarrow (0.15m)^2 \rightarrow 0.0225 m^2 \\
+        I &= \frac{t}{N \cdot B \cdot A} = \frac{9.0 Nm}{50 \cdot 0.8 T \cdot 0.0225 m^2} \rightarrow \underline{10 A}
+    \end{align*}
+}
+
+\newpage
+
+\qs{}{
+Auton sytytyspuolassa on kaksi induktiivisesti kytkettyä käämiä. Kun
+ensiöpiirin virtaa katkotaan, se pienenee kahdessa millisekunnissa arvosta 5 A
+nollaan. Kuinka suuri on systeemin keskinäisinduktanssin oltava, jotta
+toisiokäämin keskimääräinen induktiojännite olisi 20 kV? [ 8,0 H ]
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        V &= 20 kV = 20000 V \quad I = 5 A \quad \Delta t = 0.002 s \\\\
+        V &= -M \cdot (\frac{\Delta I}{\Delta t}) \\
+        M &= -V \cdot \frac{\Delta t}{\Delta I} \\
+        M &= -(20000 V) \cdot \frac{0.002 s}{5 A} \rightarrow \underline{8.0 H}
+    \end{align*}
+}
+
+
+\end{document}
