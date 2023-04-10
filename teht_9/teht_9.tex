@@ -1,0 +1,71 @@
+\documentclass{report}
+
+\input{../preamble}
+\input{../macros}
+\input{../letterfonts}
+
+\title{\Huge{Anturifysiikka} Tehtävät 9}
+\author{\huge{Aman Mughal}}
+\date{10/04/2023}
+
+\begin{document}
+
+\maketitle
+
+\qs{}{
+Ilmatäytteisen toroidikäämin säde on 36 cm ja poikkileikkauksen pinta-ala
+5,9 $cm^2$
+. Kuinka suuri täytyy kierrosluvun olla, jotta käämin induktanssi olisi 50
+µH? [ 390 ]
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        N &= \sqrt{\frac{2 \pi \cdot r \cdot L}{\mu \cdot A}} \\
+        r &= 0.36 \text{ m} \\
+        A &= 5.9 \cdot 10^{-4} \text{ m}^2 \\
+        N &= \sqrt{\frac{2 \pi \cdot 0.36 m \cdot 50 \cdot 10^{-6} H}{4 \pi \cdot 10^{-7} \frac{H}{m} \cdot 5.9 \cdot 10^{-4} m^2}} \\
+        N &\approx \underline{390}
+    \end{align*}
+}
+
+\newpage
+
+\qs{}{
+Käämissä kulkeva sähkövirta pienenee 2,1 sekunnissa tasaisesti arvosta 2,2
+A arvoon 1,6 A, pysyy vakiona 3,0 sekuntia ja kasvaa 4,4 sekunnissa tasaisesti
+arvoon 3,6 A. Käämin induktanssi on 34 mH. Piirrä kuvaaja, joka esittää käämin
+lähdejännitettä ajan funktiona.
+[ 0 … 2,1 s: 9,7 mV; 2,1 s … 5,1 s: 0 V; 5,1 s … 9,5 s: -15,5 mV ]
+}
+
+\pf{Vastaus}{
+
+}
+
+\newpage
+
+\qs{}{
+Käämin läpi navasta A napaan B kulkee muuttuva tasavirta. Kun virta on 2,5
+A, potentiaalieroksi $V_B - V_A$ mitataan $-33 V$. Käämin resistanssi on 12 $\Omega$ ja
+induktanssi 0,50 H. a) Onko virta kasvamassa vai pienenemässä? b) Määritä
+virran muutosnopeus. [ a) kasvamassa b) 6,0 A/s ]
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        -\Delta V &= L(\Delta l/\Delta t) + IR \\
+        -(\ -33 V)\ &= 0,50 H \cdot \frac{\Delta l}{\Delta t} + 2.5 A \cdot 12 \Omega \\\\
+        33 V &= 0,50 H \cdot \frac{\Delta l}{\Delta t} + 30 \Omega \\\\
+        0,50 H \cdot \frac{\Delta l}{\Delta t} &= 33 V - 30 \Omega \\\\
+        0,50 H \cdot \frac{\Delta l}{\Delta t} &= 3,3 V \\\\
+        \frac{\Delta l}{\Delta t} &= \frac{3,3 V}{0,50 H} \\\\
+        \frac{\Delta l}{\Delta t} &= 6,6 A/s \\\\
+        \frac{\Delta l}{\Delta t} &= \underline{6,0 A/s}
+    \end{align*}
+
+    a) Koska $\Delta l$ / $\Delta t$ on positiivinen, virta kasvaa. \quad
+    b) 6,0 A/s.
+}
+
+\end{document}
